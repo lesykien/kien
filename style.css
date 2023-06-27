@@ -1,0 +1,711 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.1s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1340px;
+    cursor: pointer;
+}
+
+body {
+    height: 900px;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 9999;
+    transition: all 0.25s linear;
+    position: fixed;
+    top: 0;
+    border-bottom: 2px solid black;
+
+}
+
+.menu {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu__item a:hover {
+    color: #0360a8;
+}
+
+.sticky .menu__item a {
+    color: white;
+}
+
+.sticky .menu__item a:hover {
+    color: black;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.menu__item:hover {
+    color: #0360a8;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.main__logo {
+    width: 15%;
+}
+
+.main__logo--item {
+    display: block;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+.main__item {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.main__item .main__item--boy {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main__item--boy li {
+    list-style: none;
+}
+
+.main__item--boy li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(21, 21, 21);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 0px;
+    /* margin-top: 85px; */
+
+}
+
+.banner img {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.banner .phai {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* background-color: rgba(101, 101, 101, 0.266); */
+    top: 0px;
+    right: 0px;
+    background-image: linear-gradient(to bottom, #ffffffcc, rgba(255, 255, 255, 0));
+}
+
+.banner .trai {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    /* background-image: linear-gradient(to bottom, #CCCC, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), white); */
+    background-image: linear-gradient(to bottom, #ffffffcc, rgba(255, 255, 255, 0));
+
+}
+
+.banner__item--content {
+    position: absolute;
+    bottom: 90px;
+    left: 70px;
+}
+
+.banner__content {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.banner__boy {
+    width: 600px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.75;
+}
+
+.banner__item {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0067b8;
+    border: none;
+    border-radius: 5px;
+}
+
+.banner__item:hover {
+    background-color: #0360a8;
+}
+
+.banner__item a {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.sticky {
+    background-color: rgb(104, 104, 104);
+    transition: all 0.25s linear;
+    padding: 5px 0px;
+    width: 100%;
+    border: none;
+    background-image: none;
+
+}
+
+header.sticky ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+header.sticky ul li a:hover {
+    color: black;
+}
+
+header.sticky .menu {
+    /* opacity: 0; */
+    color: white;
+}
+
+header.sticky .menu__item:hover {
+    color: black;
+}
+
+header.sticky .main__logo .main__logo--item {
+    color: rgb(255, 255, 255);
+}
+
+.chu {
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.new {
+    color: black;
+}
+
+.input__item {
+    width: 60%;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #0067b8;
+    position: absolute;
+    right: 17rem;
+    top: auto;
+    bottom: auto;
+}
+
+.input__icon {
+    font-size: 17px;
+    padding: 0px 10px;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 18rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.25s linear;
+
+}
+
+.input__huy {
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0360a8;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 12rem;
+    top: auto;
+    bottom: auto;
+}
+
+.sticky .input__icon {
+    top: auto;
+    bottom: auto;
+    transition: all 0.25s linear;
+}
+
+.sticky .input__item {
+    top: auto;
+    bottom: auto;
+    transition: all 0.25s linear;
+}
+
+.sticky .input__huy {
+    top: auto;
+    bottom: auto;
+    transition: all 0.25s linear;
+}
+
+/* form đăng ký  */
+section {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./img/RE4Ufmp-Msft-Surface-Pro-8-with-Slim-pen-and-Microsoft-Ocean-Plastic-Mouse-featuring-an-Earth-Day-theme_VP5-1920x720.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main__input--item {
+    border-radius: 5px;
+    width: 400px;
+    min-height: 500px;
+    display: flex;
+    backdrop-filter: blur(15px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 2rem 1rem;
+
+
+}
+
+.dangKy__content {
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 3rem;
+    transition: all 0.25s linear;
+
+}
+
+.input__form {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+.form-button a {
+    font-size: 17px;
+    color: #0067b8;
+}
+
+.form-button button {
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* fomr đăng nhập  */
+.main__input--item1 {
+    border-radius: 5px;
+    width: 400px;
+    height: 320px;
+    display: flex;
+    background-color: rgba(249, 249, 249, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
+    padding: 3rem 2rem;
+}
+.input__form--item {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+/* footer*/
+
+footer {
+    margin-top: 100px;
+    padding: 50px;
+    background-color: #F2F2F2;
+    display: flex;
+    gap: 20px;
+}
+
+.foote__content {
+    font-size: 15px;
+    cursor: text;
+    color: #5F5F5F;
+}
+
+.main__footer--item {
+    font-size: 12px;
+    line-height: 2.5;
+    cursor: pointer;
+}
+
+/* facebook */
+
+.item__fb {
+    align-items: center;
+    margin-top: 100px;
+    font-size: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.item__fb--icon a {
+    font-size: 35px;
+    color: #0067b8;
+}
+
+/* sản phẩm  */
+.sanpham__main {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    width: 250px;
+    justify-content: center;
+}
+
+.sanpham__main--item {
+    width: 100px;
+}
+
+.img__sanpham {
+    padding: 5px;
+}
+
+.img__sanpham img {
+    width: 50px;
+}
+
+.ten__sanpham {
+    text-decoration: underline;
+    color: #0067b8;
+    font-size: 20px;
+    font-weight: 500;
+    width: 160px;
+    padding: 10px 0px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px ;
+}
+
+.chuot__main {
+    margin-top: 100px;
+    border-top: 2px solid #5F5F5F;
+    padding: 50px 0px;
+}
+
+.chuot__main--mota {
+    height: 150px;
+}
+
+.chuot__main--content {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    line-height: 2;
+    text-align: center;
+    position: relative;
+}
+
+.chuot__content {
+    font-size: 40px;
+    font-weight: 500;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.chuot__content__item {
+    width: 600px;
+    text-align: center;
+    position: absolute;
+    left: 29%;
+}
+
+.chuot__main--img {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    line-height: 1.5;
+    border-radius: 5px;
+    transition: all 0.25s linear;
+    margin-top: 3rem;
+}
+
+.chuot__main--img:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chuot__main--img img {
+    width: 300px;
+    object-fit: cover;
+    height: 11rem;
+}
+
+.chuot__main--chu {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 50px;
+    height: 65px;
+
+}
+
+.chuot__chu--item {
+    padding: 0px 20px 20px 20px;
+    cursor: text;
+}
+
+.gia__chuot {
+    margin-bottom: 10px;
+}
+
+.mua__sanpham {
+    margin: 20px;
+    cursor: pointer;
+    color: #0067b8;
+}
+
+.mua__sanpham:hover {
+
+    text-decoration: underline;
+}
+
+.hinh__sanpham {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* tăng giảm số lượng sản phẩm  */
+.soLuong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+.soLuong-sanPham {
+    font-size: 1.3rem;
+    border: 1px solid black;
+    padding: 0px 1rem;
+    margin: 0px 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.btn-soLuong {
+    font-size: 1.3rem;
+    padding: 3px 10px;
+    border: none;
+    background-color: #0067b8;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.themSP {
+    font-size: 3rem;
+}
+
+/* input thêm sản phẩm  */
+#them-sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    background-image: url(./img/RE4Ufmp-Msft-Surface-Pro-8-with-Slim-pen-and-Microsoft-Ocean-Plastic-Mouse-featuring-an-Earth-Day-theme_VP5-1920x720.avif);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.themsp-input {
+    font-size: 1rem;
+    padding: 10px 1rem;
+    outline: none;
+    margin-top: 2rem;
+}
+
+.them-input {
+    display: inline-block;
+}
+
+button.qty-btn {
+    width: 22px;
+    height: 22px;
+}
+
+#themSanPham {
+    display: none;
+    background-color: #ffffff6d;
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+#them-sp label {
+    width: 200px;
+    display: inline-block;
+}
+
+input.themsp-input {
+    width: 400px;
+}
+
+.btn-them {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#btn-themsp {
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    margin: 0 2rem;
+}
+
+.btn-sua--xoa a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-sua--xoa:hover a {
+    color: white;
+}
+
+.btn-thoat {
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.btn-themSp {
+    background-color: #0068b800;
+}
+
+
+/* xóa sửa sản phẩm  */
+
+.xoa-sua {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.btn-sua--xoa {
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.1s linear;
+    border: none;
+}
+
+.btn-sua--xoa:hover {
+    color: white;
+    border: 2px solid white;
+    padding: 12px;
+}
+
+.sua:hover {
+    box-shadow: #00b8847a 0px 5px 15px;
+    background-color: #00b884;
+
+}
+
+.xoa:hover {
+    box-shadow: rgba(165, 42, 42, 0.563) 0px 5px 15px;
+    background-color: brown;
+
+}
+.btn-sp {
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    background-color: #0068b800;
+}
+.chuot {
+    border: none;
+}
+button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}

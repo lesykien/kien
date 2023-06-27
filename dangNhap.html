@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="img">
+        <div class="main__input--item1">
+            <form class="main__dangKy container" onsubmit="dangNhap(event)">
+                <h3 class="dangKy__content">ĐĂNG NHẬP TÀI KHOẢN</h3>
+
+                <input type="text" id="username" class="input__form--item" placeholder="Username">
+                <br>
+
+                <input type="password" id="password" class="input__form--item" placeholder="Password">
+                <br>
+                <div class="form-button">
+                    <button type="submit" class="form__button" onclick="login()">Đăng nhập</button>
+                    <a href="dangKy.html">Đăng kí tài khoản</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

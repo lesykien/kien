@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<!-----nhúng fontsomewand-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="refresh()">
+	<!-- menu và search ,  sign in -->
+	<header>
+		<div class="main" id="main1">
+			<div class="main__logo">
+				<span class="main__logo--item">ASM</span>
+			</div>
+			<div class="main__item" id="head">
+				<ul class="main__item--boy">
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="">Trang chủ</a></li>
+					<li><a href="">Trang chủ</a></li>
+					<li><a href="">Trang chủ</a></li>
+				</ul>
+				<div class="menu">
+					<div class="menu__item timkiem" onclick="timKiem()">
+						Tìm kiếm <i class="fa-solid fa-magnifying-glass icon"></i>
+					</div class="menu__item">
+					<div class="menu__item timkiem" onclick="">
+						<a href="gioHang.html">Giỏ hàng <i class="fa-solid fa-cart-shopping"></i></a>
+					</div class="menu__item">
+					<div class="menu__item" id="login">
+						<a href="dangNhap.html">Đăng xuất
+							<i class="fa-solid fa-user"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<!---------------------------------->
+
+	<!-- banner có chuyển ảnh khi click vào hình -->
+	<div class="banner">
+		<img src="./img/RWD7KO-Msft-Designer-Compact-keyboard-next-to-a-Microsoft-Bluetooth-ergonomic-mouse_VP5-1920x720.webp"
+			alt="" id="img">
+		<div class="phai" onclick="phaiImage()"></div>
+		<div class="trai" onclick="traiImage()"></div>
+		<div id="banner">
+			<div class="banner__item--content" id="men">
+				<div class="banner__content">Sản phẩm mới</div><br>
+				<div class="banner__boy">
+					Đặt câu hỏi thực tế. Trò chuyện và tạo lập. Nhận câu trả lời tốt hơn nhờ tính năng Copilot dựa trên
+					nền
+					công
+					nghệ AI cho web.
+				</div><br>
+				<button class="banner__item">
+					<a href="https://www.bing.com/new?icid=mscom_marcom_H1a_BingAI">
+						Tìm hiểu về Bingmới
+					</a>
+				</button>
+			</div>
+		</div>
+
+	</div>
+	<!--- ----------------------->
+
+	<!---sản phẩm-->
+	<div class="sanpham__main container">
+		<div class="sanpham__main--item">
+			<div class="img__sanpham">
+				<div class="themSP">
+					<i class="fa-solid fa-cart-plus"></i>
+				</div>
+			</div>
+			<button class="ten__sanpham" id="btn-hieninput">Thêm sản phẩm</button>
+		</div>
+	</div>
+	<!------------------------>
+
+	<div id="them-sp">
+		<div class="them-input" id="themSanPham">
+			<label>Hình sản phẩm: </label>
+			<input class="themsp-input" type="text" id="themsp-hinh">
+			<br>
+			<label>Tên sản phẩm: </label>
+			<input class="themsp-input" type="text" id="themsp-ten">
+			<br>
+			<label>Giá sản phẩm: </label>
+			<input class="themsp-input" type="text" id="themsp-gia">
+			<br>
+			<label>Số lượng tồn kho: </label>
+			<input class="themsp-input" type="text" id="themsp-soluong">
+			<input id="index" type="hidden">
+			<br>
+			<div class="btn-them">
+				<a href="#chuot"><button id="btn-themsp" class="btn-themSp">Thêm</button></a>
+				<button id="btn-themsp" onclick="document.location.reload()" class="btn-thoat">Thoát</button>
+				<button id="btn-suasp" class="btn-sp" onclick="suaSanPham()" style="display: none;">Sửa SP</button>
+			</div>
+		</div>
+	</div>
+	<!----chuột-->
+	<div class="chuot__main container">
+		<div class="chuot__main--item" id="chuot">
+			<div class="chuot__main--content">
+				<h4 class="chuot__content">Sản phẩm</h4>
+			</div>
+
+			<!----hình ảnh và mô tả -->
+			<div class="hinh__sanpham" id="sanpham-dathem">
+			</div>
+
+		</div>
+	</div>
+	<!------------------->
+	<!------faceboob-->
+	<div class="item__fb container">
+		Dõi theo trên Microsoft <div class="item__fb--icon"> <a href="https://www.facebook.com/Microsoft.com.vn"><i
+					class="fa-brands fa-facebook-f"></i></a></div>
+	</div>
+
+	<!------------------>
+	<!--- footer-->
+	<footer>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+		<div class="main__footer container">
+			<div class="main__footer--item">
+				<h4 class="foote__content"> Nội dung mới<br></h4>
+				<div class="footer__content--item">
+					Microsoft 365<br>
+					Microsoft 365 Family<br>
+					Microsoft 365 Personal<br>
+					trò chói trên PC<br>
+					PC Game Pass<br>
+					Ứng dụng cho Windows 11<br>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!------------------->
+	<script src="./main.js"></script>
+</body>
+
+</html>
